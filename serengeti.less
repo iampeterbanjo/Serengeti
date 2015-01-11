@@ -1,0 +1,301 @@
+// Copyright (c) 2014 Adobe Systems Incorporated. All rights reserved.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+
+// Style definitions are from
+// https://github.com/chriskempson/tomorrow-theme/tree/master/Brackets
+
+/*
+ * Brackets Default Theme
+ *
+ * Defines all the variables that one can configure in a theme. This should
+ * contain all variables / mixins for UI styling that we want to be able to
+ * change in a theme.
+ *
+ * Throughout the rest of the LESS files we should _only_ use color
+ * variable names that are on the LHS of the list below. So, if we
+ * need a new color for some UI element, we should add a variable
+ * in this file.
+ */
+
+/* Define some variables used in multiple places */
+
+//circus
+@circus1: #2E0927;
+@circus2: #D90000;
+@circus3: #FF2D00;
+@circus4: #FF8C00;
+@circus5: #04756F;
+
+//oddend
+@oddend1: #000000;
+@oddend2: #333333;
+@oddend3: #FF358B;
+@oddend4: #01B0F0;
+@oddend5: #AEEE00;
+
+//Beetle Bus goes Jamba juice
+@jambaJuice1: #730046;
+@jambaJuice2: #BFBB11;
+@jambaJuice3: #FFC200;
+@jambaJuice4: #E88801;
+@jambaJuice5: #C93C00;
+
+//elemental
+@elemental1: #E54661;
+@elemental2: #FFA644;
+@elemental3: #998A2F;
+@elemental4: #2C594F;
+@elemental5: #002D40;
+
+@background: #1d1f21;
+@foreground: #ddd;
+@secondryBackground: black;
+
+@activelineBackgroundFocused: #2f2f2f;
+
+@activelineBackgroundLinePadding: #000;
+@activelineGutterEltBackground: #000;
+@activelineGutterEltColor: #fff;
+@activelineBackgroundInlineWidgetGutterElt: #000;
+
+@atomColor: #d89333;
+@stringColor: #d89333;
+@string2Color: #d89333;
+@hrColor: #d89333;
+@numberColor: #d89333;
+@attributeColor: #d89333;
+
+@plusColor: #85a300;
+
+@defColor: #b77fdb;
+@propertyColor: #b77fdb;
+
+@variableColor: @foreground;
+@variable2Color: @foreground;
+@variable3Color: @foreground;
+@operatorColor: @foreground;
+@metaColor: @foreground;
+@bracketColor: @foreground;
+
+@commentColor: #767676;
+
+@errorColor: #dc322f;
+@minusColor: #dc322f;
+
+@headerColor: #d85896;
+
+@linkColor: #b77fdb;
+
+@rangeinfoColor: #6c71c4;
+
+@keywordColor: #6c9ef8;
+@qualifierColor: #6c9ef8;
+@builtinColor: #6c9ef8;
+@tagColor: #6c9ef8;
+@quoteColor: #6c9ef8;
+
+@searchingBackgroundColor: #d3cd69;
+@searchingCurrentMatchBackgroundColor: #f6a644;
+
+@cursorBorderLeft: #c5c8c6;
+
+@guttersBackgroundColor: @secondryBackground;
+@guttersBorderRight: none;
+
+@linenumberColor: @jambaJuice3;
+
+@selectedBackground: #333f48;
+
+@selectedBackgroundFocused: #333f48;
+
+@matchingBracketColor: @foreground;
+@matchingBracketBackgroundColor: #2e5c00;
+@matchingtagColor: @foreground;
+@matchingtagBackgroundColor: #2e5c00;
+
+@overwriteCursorBorderBottom: #fff;
+
+@codeMirrorBackground: transparent;
+@codeMirrorGuttersBackground: transparent;
+@codeMirrorGuttersBorderRight: none;
+
+@codeMirrorActivelineBackground: transparent;
+@codeMirrorActivelineGutterEltBackground: transparent;
+@codeMirrorActivelineGutterEltColor: #767676;
+
+@codeMirrorFocusedActivelineBackground: #2f2f2f;
+
+@codeMirrorFocusedActivelineGutterEltBackground: rgba(0, 0, 0, 0.2);
+@codeMirrorFocusedActivelineGutterEltColor: #fff;
+
+@imageViewBackgroundColor: @background;
+@notEditorBackgroundColor: @background;
+
+@viewPaneColor: @foreground;
+
+/* Code Styling */
+
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: @activelineBackgroundFocused;
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 @activelineBackgroundLinePadding;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: @activelineGutterEltBackground;
+        color: @activelineGutterEltColor;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: @activelineBackgroundInlineWidgetGutterElt;
+    }
+}
+
+.cm-atom {color: @atomColor;}
+.cm-string {color: @stringColor;}
+.cm-string-2 {color: @string2Color;}
+.cm-hr {color: @hrColor;}
+
+.cm-number {color: @numberColor;}
+.cm-attribute {color: @attributeColor;}
+.cm-plus {color: @plusColor;}
+
+.cm-def {color: @defColor;}
+.cm-property {color: @propertyColor;}
+
+.cm-variable {color: @variableColor}
+.cm-variable-2 {color: @variable2Color}
+.cm-variable-3 {color: @variable3Color}
+.cm-operator {color: @operatorColor}
+.cm-meta {color: @metaColor}
+.cm-bracket {color: @bracketColor;}
+
+.cm-comment {color: @commentColor;}
+.cm-error {color: @errorColor;}
+.cm-minus {color: @minusColor;}
+.cm-header {color: @headerColor;}
+.cm-link {color: @linkColor; text-decoration: none;}
+.cm-rangeinfo {color: @rangeinfoColor;}
+
+.cm-keyword {color: @keywordColor;}
+.cm-qualifier {color: @qualifierColor;}
+.cm-builtin {color: @builtinColor;}
+.cm-tag {color: @tagColor;}
+.cm-quote {color: @quoteColor;}
+
+/* Extra CSS */
+
+.CodeMirror-searching {
+    background-color: @searchingBackgroundColor;
+    &.searching-current-match {
+        background-color: @searchingCurrentMatchBackgroundColor;
+    }
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid @cursorBorderLeft !important;
+}
+
+.CodeMirror-gutters {
+    background-color: @secondryBackground;
+    border-right: @guttersBorderRight;
+}
+
+.CodeMirror-linenumber {
+    color: @linenumberColor;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: @selectedBackground;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: @selectedBackgroundFocused;
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    /* Ensure visibility against gray inline editor background */
+    background-color: @matchingBracketBackgroundColor;
+    color: @foreground !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: @cursorBorderLeft !important;
+    border-bottom: 1px solid @overwriteCursorBorderBottom;
+}
+
+/*
+    CodeMirror's use of descendant selectors for certain styling causes problems when editors are
+    nested because, for items in the inner editor, the left-hand clause in the selector will now
+    match either the actual containing CodeMirror instance *OR* the outer "host" CodeMirror instance.
+
+    TODO (issue #324): We'll still have problems if editors can be nested more than one level deep,
+    or if any other descendant-selector-driven CM styles can differ between inner & outer editors
+    (potential problem areas include line wrap and coloring theme: basically, anything in codemirror.css
+    that uses a descandant selector where the CSS class name to the left of the space is something
+    other than a vanilla .CodeMirror)
+ */
+.CodeMirror {
+    .CodeMirror {
+        background: @codeMirrorBackground;
+    }
+
+    .CodeMirror .CodeMirror-gutters {
+        background: @codeMirrorGuttersBackground;
+        border-right: @codeMirrorGuttersBorderRight;
+    }
+
+    .CodeMirror .CodeMirror-activeline-background {
+        background: @codeMirrorActivelineBackground;
+    }
+
+    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+        background: @codeMirrorActivelineGutterEltBackground;
+        color: @codeMirrorActivelineGutterEltColor;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline-background {
+        background: @codeMirrorFocusedActivelineBackground;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline {
+        .CodeMirror-gutter-elt {
+            background: @codeMirrorFocusedActivelineGutterEltBackground;
+            color: @codeMirrorFocusedActivelineGutterEltColor;
+        }
+    }
+}
+
+/* Non-editor styling */
+
+.image-view,
+.not-editor {
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: @foreground;
+}
