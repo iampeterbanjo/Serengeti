@@ -64,29 +64,44 @@
 @elemental4: #2C594F;
 @elemental5: #002D40;
 
-@background: #1d1f21;
+// IDE
+@background: black;
 @foreground: #ddd;
 @secondryBackground: black;
+@propertyValueColour: #d89333;
+@reservedWordsColour: @oddend4;
+@variablesColour: @elemental1;
 
-@activelineBackgroundFocused: #2f2f2f;
+@activelineBackgroundFocused: #333;
 
 @activelineBackgroundLinePadding: #000;
 @activelineGutterEltBackground: #000;
 @activelineGutterEltColor: #fff;
 @activelineBackgroundInlineWidgetGutterElt: #000;
 
-@atomColor: #d89333;
-@stringColor: #d89333;
-@string2Color: #d89333;
-@hrColor: #d89333;
-@numberColor: #d89333;
-@attributeColor: #d89333;
+// main text elements
+@atomColor: @propertyValueColour;
+@stringColor: @propertyValueColour;
+@string2Color: @propertyValueColour;
+@hrColor: @propertyValueColour;
+@numberColor: @propertyValueColour;
+@attributeColor: @propertyValueColour;
 
-@plusColor: #85a300;
+// secondary text elements
+@keywordColor: @reservedWordsColour;
+@qualifierColor: @reservedWordsColour;
+@builtinColor: @reservedWordsColour;
+@tagColor: @reservedWordsColour;
+@quoteColor: @reservedWordsColour;
 
-@defColor: #b77fdb;
-@propertyColor: #b77fdb;
+// programmatic text
+// values
+@defColor: @variablesColour;
 
+@propertyColor: @variablesColour;
+@linkColor: @variablesColour;
+
+// keys
 @variableColor: @foreground;
 @variable2Color: @foreground;
 @variable3Color: @foreground;
@@ -94,22 +109,16 @@
 @metaColor: @foreground;
 @bracketColor: @foreground;
 
-@commentColor: #767676;
+@plusColor: #85a300;
+
+@commentColor: @oddend5;
 
 @errorColor: #dc322f;
 @minusColor: #dc322f;
 
 @headerColor: #d85896;
 
-@linkColor: #b77fdb;
-
 @rangeinfoColor: #6c71c4;
-
-@keywordColor: #6c9ef8;
-@qualifierColor: #6c9ef8;
-@builtinColor: #6c9ef8;
-@tagColor: #6c9ef8;
-@quoteColor: #6c9ef8;
 
 @searchingBackgroundColor: #d3cd69;
 @searchingCurrentMatchBackgroundColor: #f6a644;
